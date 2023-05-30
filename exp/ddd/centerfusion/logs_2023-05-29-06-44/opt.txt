@@ -1,0 +1,183 @@
+==> commit hash: b'3bac5c9\n'
+==> torch version: 1.7.1
+==> cudnn version: 8005
+==> Cmd:
+['test.py', 'ddd', '--exp_id', 'centerfusion', '--dataset', 'nuscenes', '--val_split', 'val', '--run_dataset_eval', '--num_workers', '4', '--nuscenes_att', '--velocity', '--gpus', '0', '--pointcloud', '--radar_sweeps', '6', '--max_pc_dist', '60.0', '--pc_z_offset', '-0.0', '--load_model', '../exp/ddd/centerfusion/model_last.pth', '--flip_test']
+==> Opt:
+  K: 100
+  amodel_offset_weight: 1
+  arch: dla_34
+  aug_rot: 0
+  backbone: dla34
+  batch_size: 32
+  chunk_sizes: [32]
+  custom_dataset_ann_path: 
+  custom_dataset_img_path: 
+  custom_head_convs: {'dep_sec': 3, 'rot_sec': 3, 'velocity': 3, 'nuscenes_att': 3}
+  data_dir: /home/dell/ShuCode/CenterFusion/src/lib/../../data
+  dataset: nuscenes
+  dataset_version: 
+  debug: 0
+  debug_dir: /home/dell/ShuCode/CenterFusion/src/lib/../../exp/ddd/centerfusion/debug
+  debugger_theme: white
+  demo: 
+  dense_reg: 1
+  dep_res_weight: 1
+  dep_weight: 1
+  depth_scale: 1
+  dim_weight: 1
+  disable_frustum: False
+  dla_node: dcn
+  down_ratio: 4
+  eval: False
+  eval_n_plots: 0
+  eval_render_curves: False
+  exp_dir: /home/dell/ShuCode/CenterFusion/src/lib/../../exp/ddd
+  exp_id: centerfusion
+  fix_res: True
+  fix_short: -1
+  flip: 0.5
+  flip_test: True
+  fp_disturb: 0
+  freeze_backbone: False
+  frustumExpansionRatio: 0.0
+  gpus: [0]
+  gpus_str: 0
+  head_conv: {'hm': [256], 'reg': [256], 'wh': [256], 'dep': [256], 'rot': [256], 'dim': [256], 'amodel_offset': [256], 'dep_sec': [256, 256, 256], 'rot_sec': [256, 256, 256], 'nuscenes_att': [256, 256, 256], 'velocity': [256, 256, 256]}
+  head_kernel: 3
+  heads: {'hm': 10, 'reg': 2, 'wh': 2, 'dep': 1, 'rot': 8, 'dim': 3, 'amodel_offset': 2, 'dep_sec': 1, 'rot_sec': 8, 'nuscenes_att': 8, 'velocity': 3}
+  hm_dist_thresh: {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 1, 6: 1, 7: 1, 8: 0, 9: 0}
+  hm_disturb: 0
+  hm_hp_weight: 1
+  hm_to_box_ratio: 0.3
+  hm_transparency: 0.7
+  hm_weight: 1
+  hp_weight: 1
+  hungarian: False
+  ignore_loaded_cats: []
+  img_format: jpg
+  input_h: 448
+  input_res: 800
+  input_w: 800
+  iou_thresh: 0
+  keep_res: False
+  kitti_split: 3dop
+  layers_to_freeze: ['base', 'dla_up', 'ida_up']
+  load_model: ../exp/ddd/centerfusion/model_last.pth
+  load_results: 
+  lost_disturb: 0
+  lr: 0.000125
+  lr_step: [60]
+  ltrb: False
+  ltrb_amodal: False
+  ltrb_amodal_weight: 0.1
+  ltrb_weight: 0.1
+  master_batch_size: 32
+  max_age: -1
+  max_frame_dist: 3
+  max_pc: 1000
+  max_pc_dist: 60.0
+  model_output_list: False
+  msra_outchannel: 256
+  neck: dlaup
+  new_thresh: 0.3
+  nms: False
+  no_color_aug: False
+  no_pause: False
+  no_pre_img: False
+  non_block_test: False
+  normalize_depth: True
+  not_cuda_benchmark: False
+  not_max_crop: False
+  not_prefetch_test: False
+  not_rand_crop: False
+  not_set_cuda_env: False
+  not_show_bbox: False
+  not_show_number: False
+  num_classes: 10
+  num_epochs: 70
+  num_head_conv: 1
+  num_img_channels: 3
+  num_iters: -1
+  num_resnet_layers: 101
+  num_stacks: 1
+  num_workers: 4
+  nuscenes_att: True
+  nuscenes_att_weight: 1
+  off_weight: 1
+  optim: adam
+  out_thresh: -1
+  output_h: 112
+  output_res: 200
+  output_w: 200
+  pad: 31
+  pc_atts: ['x', 'y', 'z', 'dyn_prop', 'id', 'rcs', 'vx', 'vy', 'vx_comp', 'vy_comp', 'is_quality_valid', 'ambig_state', 'x_rms', 'y_rms', 'invalid_state', 'pdh0', 'vx_rms', 'vy_rms']
+  pc_feat_channels: {'pc_dep': 0, 'pc_vx': 1, 'pc_vz': 2}
+  pc_feat_lvl: ['pc_dep', 'pc_vx', 'pc_vz']
+  pc_roi_method: pillars
+  pc_z_offset: -0.0
+  pillar_dims: [1.5, 0.2, 0.2]
+  pointcloud: True
+  pre_hm: False
+  pre_img: False
+  pre_thresh: -1
+  print_iter: 0
+  prior_bias: -4.6
+  public_det: False
+  qualitative: False
+  r_a: 250
+  r_b: 5
+  radar_sweeps: 6
+  reg_loss: l1
+  reset_hm: False
+  resize_video: False
+  resume: False
+  reuse_hm: False
+  root_dir: /home/dell/ShuCode/CenterFusion/src/lib/../..
+  rot_weight: 1
+  rotate: 0
+  run_dataset_eval: True
+  same_aug_pre: False
+  save_all: False
+  save_dir: /home/dell/ShuCode/CenterFusion/src/lib/../../exp/ddd/centerfusion
+  save_framerate: 30
+  save_img_suffix: 
+  save_imgs: []
+  save_point: [90]
+  save_results: False
+  save_video: False
+  scale: 0
+  secondary_heads: ['velocity', 'nuscenes_att', 'dep_sec', 'rot_sec']
+  seed: 317
+  shift: 0
+  show_track_color: False
+  show_velocity: False
+  shuffle_train: False
+  sigmoid_dep_sec: True
+  skip_first: -1
+  sort_det_by_dist: False
+  tango_color: False
+  task: ddd
+  test_dataset: nuscenes
+  test_focal_length: -1
+  test_scales: [1.0]
+  track_thresh: 0.3
+  tracking: False
+  tracking_weight: 1
+  train_split: train
+  trainval: False
+  transpose_video: False
+  use_loaded_results: False
+  val_intervals: 10
+  val_split: val
+  velocity: True
+  velocity_weight: 1
+  video_h: 512
+  video_w: 512
+  vis_gt_bev: 
+  vis_thresh: 0.3
+  warm_start_weights: False
+  weights: {'hm': 1, 'reg': 1, 'wh': 0.1, 'dep': 1, 'rot': 1, 'dim': 1, 'amodel_offset': 1, 'dep_sec': 1, 'rot_sec': 1, 'nuscenes_att': 1, 'velocity': 1}
+  wh_weight: 0.1
+  zero_pre_hm: False
+  zero_tracking: False
